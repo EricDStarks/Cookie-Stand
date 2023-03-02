@@ -31,9 +31,9 @@ const seattle = {
 
 let hoursArray = document.querySelector('.output')
     for (let i = 0; i < seattle.hoursOfOperation.length; i++){
-        let seattlecookies = document.createElement("li");
-        seattlecookies.innerHTML = `${seattle.hoursOfOperation[i]}: ${seattle.cookiesPerHour[i]} cookies`;
-        hoursArray.append(seattlecookies);
+        let variable = document.createElement("li");
+        variable.innerHTML = `${seattle.hoursOfOperation[i]}: ${seattle.cookiesPerHour[i]} cookies`;
+        hoursArray.append(variable);
     }
 
 // calls each function so array of cookies is put into an array. If the function isn't called it'll be undefined.
