@@ -80,3 +80,39 @@ let hoursDemo = ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm
     7pm: 57 cookies
     Total: 875 cookies
     */
+    function getRandom(max, min) {
+        return Math.ceil(Math.random() * (max - min) + min);
+        // 0 >= random #  <= 1  * limit
+    }
+    
+    const tokyo = {
+        min: 3,
+        max: 24,
+        avg: 1.2,
+        location: 'Tokyo',
+        hoursOfOperation: ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"],
+        customersPerHour: function() {
+            console.log(this.max);
+            console.log(this.min);
+            return getRandom(this.max, this.min);
+        },
+        cookiesPerHour: [],
+        getCookies: function() {
+            for(let i = 0; i < this.hoursOfOperation.length; i++) {
+                console.log('tokyo avg cookies/sale', this.avg);
+                console.log('tokyo avg customers/hour', this.customersPerHour());
+                this.cookiesPerHour.push(Math.ceil(this.avg * this.customersPerHour()));
+            }
+            return this.cookiesPerHour;
+        },
+        
+    }
+    let hoursDemo0 = ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"];
+    let cookieDemo0 = [152,265,202,353,227,221,202,378,171,309,215,189,189,385];
+    let newhoursArray = document.querySelector('.output')
+    for(let i = 0; i < hoursDemo.length; i++) {
+        //hoursDemo[i].innerHTML
+        let variable = document.createElement("li");
+        variable.innerHTML = `${hoursDemo[i]}: ${cookieDemo[i]} cookies`;
+        hoursArray.append(variable);
+    }
