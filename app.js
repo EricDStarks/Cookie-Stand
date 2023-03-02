@@ -127,6 +127,6 @@ seattle.getCookies();
     let hoursArray = document.querySelector('.output')
     for (let i = 0; i < seattle.hoursOfOperation.length; i++){
         let variable = document.createElement("li");
-        variable.innerHTML = `${seattle.hoursOfOperation[i]}: ${seattle.getCookies()[i]} cookies`;
+        variable.innerHTML = `${seattle.hoursOfOperation[i]}: ${seattle.getCookies()[i]} cookies | ${tokyo.hoursOfOperation[i]}: ${tokyo.getCookies()[i]} cookies | ${dubai.hoursOfOperation[i]}: ${dubai.getCookies()[i]} cookies | ${paris.hoursOfOperation[i]}: ${paris.getCookies()[i]} cookies | ${lima.hoursOfOperation[i]}: ${lima.getCookies()[i]}`;
         hoursArray.append(variable);
     }
