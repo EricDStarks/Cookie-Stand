@@ -31,7 +31,7 @@ const seattle = {
 
 let hoursArray = document.querySelector('.output')
     for (let i = 0; i < seattle.hoursOfOperation.length; i++) {
-        let variable = document.createElement("li");
+        let seattlecookies = document.createElement("li");
         seattlecookies.innerHTML = `${seattle.hoursofOperation[i]}: ${seattle.getCookies()[i]}: cookies`;
         hoursArray.append(variable);
     }
