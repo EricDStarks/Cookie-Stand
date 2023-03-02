@@ -128,5 +128,5 @@ seattle.getCookies();
     for (let i = 0; i < seattle.hoursOfOperation.length; i++){
         let variable = document.createElement("li");
         variable.innerHTML = `${seattle.hoursOfOperation[i]}: ${seattle.getCookies()[i]}: cookies`;
-        hoursArray.append(variable);
+        hoursArray.append (variable);
     }
