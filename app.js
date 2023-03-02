@@ -22,6 +22,8 @@ const seattle = {
         for(let i = 0; i < this.hoursOfOperation.length; i++) {
         //console.log('this.avg', this.avg)
         //console.log('this.customerperhour()', this.customersPerHour());
+        let cookies = Math.ceil(this.avg * this.customersPerHour())
+        this.cookiesPerHour.push(cookies)
         }
         return this.cookiesPerHour;
     }
