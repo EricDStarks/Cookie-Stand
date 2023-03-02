@@ -29,6 +29,13 @@ const seattle = {
     
 }
 
+let hoursArray = document.querySelector('.ouptut')
+    for (let i = 0; i < seattle.hoursOfOperation.length; i++){
+        let seattlecookies = document.createElement("li");
+        seattlecookies.innerHTML = `${seattle.hoursofOperation[i]}: ${seattle.seattlecookies()[i]}: cookies`;
+        hoursArray.append(variable);
+    }
+
 // calls each function so array of cookies is put into an array. If the function isn't called it'll be undefined.
 seattle.getCookies();
 
@@ -124,9 +131,4 @@ seattle.getCookies();
     // call for lima function
     lima.getCookies();
 
-    let hoursArray = document.querySelector('.ouptut')
-    for (let i = 0; i < seattle.hoursOfOperation.length; i++){
-        let variable = document.createElement("li");
-        variable.innerHTML = `${seattle.hoursOfOperation[i]}: ${seattle.cookiesPerHour[i]}`;
-        hoursArray.append(variable);
-    }
+    
