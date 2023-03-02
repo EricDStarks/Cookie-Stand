@@ -65,7 +65,7 @@ seattle.getCookies();
     let hoursArray0 = document.querySelector('.ouptut')
     for (let i = 0; i < seattle.hoursOfOperation.length; i++){
         let variable = document.createElement("li");
-        variable.innerHTML = `${tokyo.hoursofOperation[i]}: ${tokyo.getCookies()[i]}: cookies`;
+        variable.innerHTML = `${tokyo.hoursOfOperation[i]}: ${tokyo.getCookies()[i]}: cookies`;
         hoursArray0.append(variable);
     }
 
