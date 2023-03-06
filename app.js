@@ -36,19 +36,22 @@ seattle.getCookies();
 //object definition for each location
     
     
-  const tokyo = {
+    const tokyo = {
         min: 3,
         max: 24,
         avg: 1.2,
-        hoursOfOperation: ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"],
+        location: `Tokyo`,
+        hoursOfOperation: ["6am","7am","8am","9am","10am","11am","12pm","1pm","2pm","3pm","4pm","5pm", "6pm","7pm"],
         customersPerHour: function() {
-            return getRandom(this.max, this.min);
+            return getRandom(this.max, this.min)
         },
-        cookiesPerHour: [],
+        cookiesPerHour:[],
         getCookies: function() {
-            for(let i = 0; i < this.hoursOfOperation.length; i++) {
-                console.log('this.avg', this.avg)
-                console.log('this.customersperhour()', this.customersPerHour());
+            for (i = 0; i < this.hoursOfOperation.length; i++) {
+               // console.log('this.avg', this.avg)
+               // console.log('this.customersperhour()', this.customersPerHour());
+               let cookies = Math.ceil(this.avg * this.customersPerHour())
+               this.cookiesPerHour.push(cookies)
             }
             return this.cookiesPerHour;
         }
@@ -69,8 +72,8 @@ seattle.getCookies();
         cookiesPerHour:[],
         getCookies: function() {
             for (i = 0; i < this.hoursOfOperation.length; i++) {
-            console.log("this.avg", this.avg)
-            console.log("this.customersperhour()", this.customersPerHour())
+           // console.log("this.avg", this.avg)
+           // console.log("this.customersperhour()", this.customersPerHour())
             let cookies = Math.ceil(this.avg * this.customersPerHour())
             this.cookiesPerHour.push(cookies)
             }
@@ -127,6 +130,6 @@ seattle.getCookies();
     let hoursArray = document.querySelector('.output')
     for (let i = 0; i < seattle.hoursOfOperation.length; i++){
         let variable = document.createElement("li");
-        variable.innerHTML = `${seattle.hoursOfOperation[i]}: ${seattle.getCookies()[i]} cookies | ${tokyo.hoursOfOperation[i]}: ${tokyo.getCookies()[i]} cookies | ${dubai.hoursOfOperation[i]}: ${dubai.getCookies()[i]} cookies | ${paris.hoursOfOperation[i]}: ${paris.getCookies()[i]} cookies | ${lima.hoursOfOperation[i]}: ${lima.getCookies()[i]}`;
+        variable.innerHTML = `${seattle.hoursOfOperation[i]}: ${seattle.getCookies()[i]} cookies | ${tokyo.hoursOfOperation[i]}: ${tokyo.getCookies()[i]} cookies | ${dubai.hoursOfOperation[i]}: ${dubai.getCookies()[i]} cookies | ${paris.hoursOfOperation[i]}: ${paris.getCookies()[i]} cookies | ${lima.hoursOfOperation[i]}: ${lima.getCookies()[i]} cookies`;
         hoursArray.append(variable);
     }
