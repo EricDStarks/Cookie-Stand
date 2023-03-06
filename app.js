@@ -47,7 +47,7 @@ seattle.getCookies();
         },
         cookiesPerHour:[],
         getCookies: function() {
-            for (i = 0; i < this.hoursOfOperation.length; i++) {
+            for (let i = 0; i < this.hoursOfOperation.length; i++) {
                // console.log('this.avg', this.avg)
                // console.log('this.customersperhour()', this.customersPerHour());
                let cookies = Math.ceil(this.avg * this.customersPerHour())
@@ -71,7 +71,7 @@ seattle.getCookies();
         },
         cookiesPerHour:[],
         getCookies: function() {
-            for (i = 0; i < this.hoursOfOperation.length; i++) {
+            for (let i = 0; i < this.hoursOfOperation.length; i++) {
            // console.log("this.avg", this.avg)
            // console.log("this.customersperhour()", this.customersPerHour())
             let cookies = Math.ceil(this.avg * this.customersPerHour())
@@ -93,7 +93,7 @@ seattle.getCookies();
         },
         cookiesPerHour:[],
         getCookies: function() {
-            for (i = 0; i < this.hoursOfOperation.length; i++) {
+            for (let i = 0; i < this.hoursOfOperation.length; i++) {
             console.log("this.avg", this.avg)
             console.log("this.customersperhour()", this.customersPerHour())
             let cookies = Math.ceil(this.avg * this.customersPerHour())
@@ -115,7 +115,7 @@ seattle.getCookies();
         },
         cookiesPerHour:[],
         getCookies: function() {
-            for (i = 0; i < this.hoursOfOperation.length; i++) {
+            for (let i = 0; i < this.hoursOfOperation.length; i++) {
             console.log("this.avg", this.avg)
             console.log("this.customersperhour()", this.customersPerHour())
             let cookies = Math.ceil(this.avg * this.customersPerHour())
