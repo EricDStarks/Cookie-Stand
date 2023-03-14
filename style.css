@@ -54,7 +54,6 @@ section{
 }
 
 footer{
-    background-color: aquamarine;
     display: flex;
     justify-content: center;
     align-content: center;
